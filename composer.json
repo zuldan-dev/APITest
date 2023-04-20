@@ -1,0 +1,27 @@
+{
+    "name": "zuldan-dev/apitest",
+    "description": "User JWT API",
+    "authors": [
+        {
+            "name": "Eugene S.",
+            "email": "zuldan2@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "*",
+        "vlucas/phpdotenv": "*",
+        "ext-json": "*",
+        "ext-pdo": "*"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}

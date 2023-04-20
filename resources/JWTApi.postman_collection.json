@@ -1,0 +1,536 @@
+{
+	"info": {
+		"_postman_id": "9c52eb74-8a1c-41f0-9c3c-38ca32411573",
+		"name": "JWTApi",
+		"description": "Api for User Registration and working with Portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13008132"
+	},
+	"item": [
+		{
+			"name": "User registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "developer",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dev321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yalantis.lab/api/register/",
+					"protocol": "http",
+					"host": [
+						"yalantis",
+						"lab"
+					],
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "developer",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dev321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://yalantis.lab/api/register/",
+							"protocol": "http",
+							"host": [
+								"yalantis",
+								"lab"
+							],
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 09:50:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=120"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Ok\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0\",\n    \"data\": {\n        \"name\": \"developer\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "developer",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dev321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yalantis.lab/api/login/",
+					"protocol": "http",
+					"host": [
+						"yalantis",
+						"lab"
+					],
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "developer",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dev321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://yalantis.lab/api/login/",
+							"protocol": "http",
+							"host": [
+								"yalantis",
+								"lab"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 10:08:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=120"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Ok\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0\",\n    \"data\": {\n        \"name\": \"developer\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Portfolio adding",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0",
+							"type": "text"
+						},
+						{
+							"key": "portfolio",
+							"value": "95.17;%;Apr 20, 2023\n99.3;%;Apr 19, 2023\n94.18;%;Apr 18, 2023\n91.01;%;Apr 17, 2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yalantis.lab/api/add/",
+					"protocol": "http",
+					"host": [
+						"yalantis",
+						"lab"
+					],
+					"path": [
+						"api",
+						"add",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Portfolio adding",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0",
+									"type": "text"
+								},
+								{
+									"key": "portfolio",
+									"value": "95.17;%;Apr 20, 2023\n99.3;%;Apr 19, 2023\n94.18;%;Apr 18, 2023\n91.01;%;Apr 17, 2023",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://yalantis.lab/api/add/",
+							"protocol": "http",
+							"host": [
+								"yalantis",
+								"lab"
+							],
+							"path": [
+								"api",
+								"add",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 10:13:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "402"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=120"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Ok\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0\",\n    \"data\": [\n        {\n            \"value\": \"95.17\",\n            \"symbol\": \"%\",\n            \"date\": \"Apr 20, 2023\",\n            \"user_id\": 3\n        },\n        {\n            \"value\": \"99.3\",\n            \"symbol\": \"%\",\n            \"date\": \"Apr 19, 2023\",\n            \"user_id\": 3\n        },\n        {\n            \"value\": \"94.18\",\n            \"symbol\": \"%\",\n            \"date\": \"Apr 18, 2023\",\n            \"user_id\": 3\n        },\n        {\n            \"value\": \"91.01\",\n            \"symbol\": \"%\",\n            \"date\": \"Apr 17, 2023\",\n            \"user_id\": 3\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Portfolio getting",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2023-04-18",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yalantis.lab/api/get/",
+					"protocol": "http",
+					"host": [
+						"yalantis",
+						"lab"
+					],
+					"path": [
+						"api",
+						"get",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Portfolio getting",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-04-18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://yalantis.lab/api/get/",
+							"protocol": "http",
+							"host": [
+								"yalantis",
+								"lab"
+							],
+							"path": [
+								"api",
+								"get",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 10:16:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "402"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=120"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Ok\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0\",\n    \"data\": [\n        {\n            \"id\": \"8\",\n            \"value\": \"95.17000\",\n            \"symbol\": \"%\",\n            \"date\": \"2023-04-20 00:00:00\",\n            \"user_id\": \"3\"\n        },\n        {\n            \"id\": \"9\",\n            \"value\": \"99.30000\",\n            \"symbol\": \"%\",\n            \"date\": \"2023-04-19 00:00:00\",\n            \"user_id\": \"3\"\n        },\n        {\n            \"id\": \"10\",\n            \"value\": \"94.18000\",\n            \"symbol\": \"%\",\n            \"date\": \"2023-04-18 00:00:00\",\n            \"user_id\": \"3\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "User logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://yalantis.lab/api/logout/",
+					"protocol": "http",
+					"host": [
+						"yalantis",
+						"lab"
+					],
+					"path": [
+						"api",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiZGV2ZWxvcGVyIn0.6jCpt9wL18Y6gSMQsmJW8ybWCuxlZEiQ_DaSuumXNU0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://yalantis.lab/api/logout/",
+							"protocol": "http",
+							"host": [
+								"yalantis",
+								"lab"
+							],
+							"path": [
+								"api",
+								"logout",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 10:19:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=120"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Ok\",\n    \"data\": \"Token removed\"\n}"
+				}
+			]
+		}
+	]
+}
