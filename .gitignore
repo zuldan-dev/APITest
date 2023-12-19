@@ -1,3 +1,4 @@
+/.idea
+/mysql-data
 /vendor
 .env
-/.idea

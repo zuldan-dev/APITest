@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- Ruleset name -->
+<ruleset name="Custom">
+    <!-- Description -->
+    <description>Custom ruleset Based on PSR12</description>
+    <!-- Rule to be referenced (`PSR12`) -->
+    <rule ref="PSR12">
+        <exclude name="PSR2.Classes.PropertyDeclaration.Underscore"/>
+    </rule>
+
+    <!-- Specify extensions (.php) -->
+    <arg name="extensions" value="php"/>
+    <!--Color the result output -->
+    <arg name="colors"/> <!--Display progress (-p)-->
+    <!--Display violation rules in error information (-s)-->
+    <arg value="ps"/>
+
+    <!-- Trailing comma rule -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast"/>
+    <rule ref="Squiz.Arrays.ArrayDeclaration.NoComma"/>
+
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
+
+    <!-- Directories to exclude from the check (for Laravel) -->
+    <exclude-pattern>/codingstyle/</exclude-pattern>
+    <exclude-pattern>/db/</exclude-pattern>
+    <exclude-pattern>/docker/</exclude-pattern>
+    <exclude-pattern>/mysql-data/</exclude-pattern>
+    <exclude-pattern>/resources/</exclude-pattern>
+    <exclude-pattern>/vendor/</exclude-pattern>
+
+</ruleset>

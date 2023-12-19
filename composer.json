@@ -11,8 +11,12 @@
         "firebase/php-jwt": "*",
         "vlucas/phpdotenv": "*",
         "ext-json": "*",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+	"symfony/http-foundation": "*"
 
+    },
+    "require-dev": {
+	"squizlabs/php_codesniffer": "3.*"
     },
     "autoload": {
         "psr-4": {

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+    db:
+        image: mysql:latest
+        container_name: api_test_db
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+            MYSQL_DATABASE: apidb
+            MYSQL_USER: apiusr
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./mysql-data:/var/lib/mysql
+    php:
+        build:
+            context: docker/php
+        container_name: api_test_php
+        volumes:
+            - .:/www
+            - ./docker/php/php.ini:/usr/local/etc/php/conf.d/custom.ini:ro
+        networks:
+            - api_test
+        depends_on:
+            - db
+
+    nginx:
+        depends_on:
+            - php
+        image: nginx:latest
+        container_name: api_test_nginx
+        working_dir: /www
+        ports:
+            - "8000:80"
+            - "443:443"
+        volumes:
+            - .:/www
+            - ./docker/nginx:/etc/nginx/conf.d
+        networks:
+            - api_test
+
+networks:
+    api_test:
+        driver: bridge

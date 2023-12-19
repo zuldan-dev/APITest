@@ -10,7 +10,7 @@ Demo API with JWT authorization.
 2. `composer install`
 3. Fill database credentials and JWT-key into the *.env* file
 4. `mysql -u <username> -p`
-5. `CREATE DATABASE userapi;`
-6. `mysql -u <username> -p userapi < db/userapi.sql `
+5. `CREATE DATABASE apidb;`
+6. `mysql -u <username> -p apidb < db/userapi.sql `
 ## Usage
 API usage documentation is posted [here](https://documenter.getpostman.com/view/13008132/2s93Y3tfJ9)
